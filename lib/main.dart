@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mobile_mobile_techtaste/ui/splash/splash_screen.dart';
+import 'package:mobile_mobile_techtaste/ui/_core/app_theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,7 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SplashScreen(),
+      theme: AppTheme.appTheme,
+      home: const SplashScreen(),
     );
   }
 }
