@@ -4,6 +4,7 @@ import 'package:mobile_mobile_techtaste/data/restaurant_data.dart';
 import 'package:mobile_mobile_techtaste/home/widgets/category_widget.dart';
 import 'package:mobile_mobile_techtaste/home/widgets/restaurant_widget.dart';
 import 'package:mobile_mobile_techtaste/model/restaurant.dart';
+import 'package:mobile_mobile_techtaste/ui/_core/widgets/appbar.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,12 +15,7 @@ class HomeScreen extends StatelessWidget {
     RestaurantData restaurantData = Provider.of<RestaurantData>(context);
     return Scaffold(
       drawer: const Drawer(),
-      appBar: AppBar(
-        actions: [
-          IconButton(
-              onPressed: () {}, icon: const Icon(Icons.account_circle_rounded))
-        ],
-      ),
+      appBar: getAppBar(context: context),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24),
         child: SingleChildScrollView(
